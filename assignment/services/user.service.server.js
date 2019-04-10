@@ -12,8 +12,8 @@ module.exports = function (app) {
     var LocalStrategy = require('passport-local').Strategy;
     var FacebookStrategy = require('passport-facebook').Strategy;
     var facebookConfig = {
-        clientID : process.env.FACEBOOK_CLIENT_ID || 650899142025340,
-        clientSecret : process.env.FACEBOOK_CLIENT_SECRET || 'b630207de3fa0044dc9a33e24eed528f',
+        clientID : process.env.FACEBOOK_CLIENT_ID || 339941689998343,
+        clientSecret : process.env.FACEBOOK_CLIENT_SECRET || 'bdfe5e59e94dd463fa65548188b70b03',
         callbackURL : process.env.FACEBOOK_CALLBACK_URL || '/auth/facebook/callback'
     };
 

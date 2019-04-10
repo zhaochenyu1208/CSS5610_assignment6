@@ -1,5 +1,5 @@
 <header>
-  <nav class="navbar fixed-top">
+  <nav class="navbar fixed-top bg-primary">
     <div class="container-fluid">
       <p class="navbar-text float-left">
         <a routerLink="/profile/website/{{website.websiteId}}/page/{{page.pageId}}/widget" class="navbar-link text-white">
@@ -33,19 +33,7 @@
         <label for="image-width">Width</label>
         <input type="text" class="form-control" id="image-width" [(ngModel)]="newWidget.width" placeholder="{{newWidget.width}}">
       </div>
-    <!--<form ngNoForm action="{{baseUrl}}/api/uploads" method="post" enctype="multipart/form-data">-->
-    <!--&lt;!&ndash;<form ngNoForm (ngSubmit)="uploads()" enctype="multipart/form-data">&ndash;&gt;-->
-      <!--<input  name="myFile"   type="file" class="form-control"/>-->
-      <!--<input  name="widgetId" value="{{currWidget.widgetId}}"   style="display: none"/>-->
-      <!--<input  name="websiteId" value="{{website.websiteId}}"   style="display: none"/>-->
-      <!--<input  name="pageId" value="{{page.pageId}}"   style="display: none"/>-->
-      <!--<input  name="userId" value="{{user.uid}}"   style="display: none"/>-->
-      <!--<button type="submit" class="btn btn-block btn-primary">-->
-        <!--Upload Image-->
-      <!--</button>-->
-      <!--<br/>-->
-    <!--</form>-->
-    <!--<form (ngSubmit)="uploads()" #f="ngForm" *ngIf="judge()" enctype="multipart/form-data">-->
+
       <div class="form-group">
         <input style="display: none" type="file" class="form-control" (change)="onFileChanged($event)" #fileInput/>
       </div>

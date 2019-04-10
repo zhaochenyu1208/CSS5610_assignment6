@@ -38,7 +38,7 @@ const port = process.env.PORT || '3200';
 app.set('port', port);
 
 // var connectionString = 'mongodb://127.0.0.1:27017/webdev';
-var connectionString = 'mongodb://heroku_c8ns7bqc:tvp6j43cefprb6aa1025sg3kus@ds161074.mlab.com:61074/heroku_c8ns7bqc';
+var connectionString = 'mongodb://heroku_f747cr11:14rp572hmuaa3744nomj8ja5nt@ds121406.mlab.com:21406/heroku_f747cr11';
 
 mongoose.Promise = global.Promise;
 const client = mongoose.connect( connectionString, { useNewUrlParser: true });

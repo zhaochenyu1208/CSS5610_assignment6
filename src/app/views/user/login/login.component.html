@@ -8,13 +8,13 @@
             <input type="text" class="form-control" name="username" placeholder="username" ngModel required #username="ngModel"/>
         </div>
         <span class="help-block" *ngIf="!username.valid && username.touched">
-            Please Enter Username!
+            Please enter a username!
         </span>
         <div class="form-group">
             <input type="password" name="password" class="form-control" placeholder="password" ngModel required #password="ngModel"/>
         </div>
         <span class="help-block" *ngIf="!password.valid && password.touched">
-            Please Enter Password!
+            Please enter a password!
         </span>
         <div class="form-group">
             <button [disabled]="!f.valid" class="btn btn-block btn-primary" type="submit">Login</button>
