@@ -1,0 +1,40 @@
+<header>
+  <nav class="navbar fixed-top">
+    <div class="container-fluid">
+      <p class="navbar-text float-left">
+        <a routerLink="/profile/website/{{website.websiteId}}/page/{{page.pageId}}/widget" class="navbar-link text-white">
+          <span class="fas fa-chevron-left fontawsome_icon top-left"></span>
+        </a>
+        <a class="text-white text-bold" routerLink="/profile/website/{{website.websiteId}}/page/{{page.pageId}}/widget">
+          Widget Edit
+        </a>
+      </p>
+      <a (click)="updateWidget()" class="navbar-link navbar-text float-right text-white check-icon">
+        <span class="fas fa-check fontawsome_icon top-right">
+        </span>
+      </a>
+    </div>
+  </nav>
+</header>
+<main>
+  <div *ngIf="errorFlag" class="alert alert-danger">
+    {{errorMsg}}
+  </div>
+  <div class="container">
+    <input [(ngModel)]="newWidget.text" class="form-control"/>
+    <input [(ngModel)]="newWidget.rows" class="form-control" type="number"/>
+    <label for="Name">Name</label>
+    <div>
+      <input [(ngModel)]="newWidget.name" type="text" class="form-control" id="Name" name="name" placeholder="Name">
+    </div>
+    <input [(ngModel)]="newWidget.placeholder" class="form-control" required/>
+    <p></p>
+    <div class="input-group">
+      <input type="text" readonly value="Formatted" class="form-control"/>
+      <span class="input-group-addon"> <input [(ngModel)]="newWidget.formatted" type="checkbox"/> </span>
+    </div>
+    <a class="btn btn-danger btn-block"
+       (click)="deleteWidget()">Delete</a>
+  </div>
+</main>
+<app-page-footer [uid]="user.uid"></app-page-footer>
