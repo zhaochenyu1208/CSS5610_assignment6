@@ -14,7 +14,7 @@ module.exports = function (app) {
     var facebookConfig = {
         clientID : process.env.FACEBOOK_CLIENT_ID || 339941689998343,
         clientSecret : process.env.FACEBOOK_CLIENT_SECRET || 'bdfe5e59e94dd463fa65548188b70b03',
-        callbackURL : process.env.FACEBOOK_CALLBACK_URL || '/auth/facebook/callback'
+        callbackURL : process.env.FACEBOOK_CALLBACK_URL || 'https://webdev-chenyuzhao-cs5610.herokuapp.com/auth/facebook/callback'
     };
 
     passport.serializeUser(serializeUser);
